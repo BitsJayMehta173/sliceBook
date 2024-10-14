@@ -1,16 +1,13 @@
 import tkinter as tk
 import re
 
-# Load the text from the file and split it into sentences
 with open('text.txt', 'r') as file:
     data = file.read()
     sentences = re.split(r'(?<=[.!?]) +', data)
 
-# Initialize the Tkinter window
 root = tk.Tk()
 root.title("Sentence Viewer with Word Highlighting")
 
-# Set the window to full screen
 root.attributes('-fullscreen', True)
 
 # Variables to track the current sentence and word indices
